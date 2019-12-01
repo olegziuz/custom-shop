@@ -36,6 +36,7 @@ open class GTToast {
     }
 }
 
+
 public struct GTToastConfig {
     static let defaultInsets = UIEdgeInsets(top: 3.0, left: 3.0, bottom: 3.0, right: 3.0)
     static let defaultFont = UIFont.systemFont(ofSize: 12.0)
@@ -54,9 +55,9 @@ public struct GTToastConfig {
     let maxImageSize: CGSize
     
     public init(
-        contentInsets: UIEdgeInsets = GTToastConfig.defaultInsets,
+        contentInsets: UIEdgeInsets = UIEdgeInsets(top: 3.0, left: 3.0, bottom: 3.0, right: 3.0),//GTToastConfig.defaultInsets,
         cornerRadius: CGFloat = 3.0,
-        font: UIFont = GTToastConfig.defaultFont,
+        font: UIFont = UIFont.systemFont(ofSize: 12.0),//GTToastConfig.defaultFont,
         textColor: UIColor = UIColor.white,
         textAlignment: NSTextAlignment = .center,
         backgroundColor: UIColor = UIColor.black.withAlphaComponent(0.8),

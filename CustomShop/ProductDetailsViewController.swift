@@ -22,7 +22,7 @@ class ProductDetailsViewController: UIViewController, MFMailComposeViewControlle
     @IBOutlet weak var btnClose: UIButton!
     @IBOutlet weak var btnMail: UIButton!
     @IBOutlet weak var btnShare: UIButton!
-    
+
     let imagesURL = "http://localhost:8080/uploads/"
 
     override func viewDidLoad() {
@@ -49,7 +49,7 @@ class ProductDetailsViewController: UIViewController, MFMailComposeViewControlle
             let objectsToShare = [textToShare, myWebsite] as [Any]
             let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
             
-            activityVC.excludedActivityTypes = [UIActivityType.airDrop, UIActivityType.addToReadingList, UIActivityType.postToFacebook, UIActivityType.postToTwitter]
+            activityVC.excludedActivityTypes = [UIActivity.ActivityType.airDrop, UIActivity.ActivityType.addToReadingList, UIActivity.ActivityType.postToFacebook, UIActivity.ActivityType.postToTwitter]
             
             activityVC.popoverPresentationController?.sourceView = sender
             self.present(activityVC, animated: true, completion: nil)

@@ -96,7 +96,7 @@ open class GTToastView: UIView, GTAnimatable {
     
     fileprivate func createImageView() -> UIImageView {
         let imageView = UIImageView()
-        imageView.contentMode = UIViewContentMode.scaleAspectFit
+        imageView.contentMode = UIView.ContentMode.scaleAspectFit
         
         return imageView
     }
